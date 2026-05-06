@@ -46,6 +46,10 @@
       font-size: 0.9rem;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     .container {
       max-width: 900px;
       margin: auto;
@@ -115,13 +119,52 @@
       font-size: 0.9rem;
     }
 
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .btn {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    /* różne kolory */
+    .phone {
+      background: #22c55e;
+      color: #022c22;
+    }
+
+    .mail {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    .discord {
+      background: #5865F2;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
   </style>
 </head>
 <body>
 
 <header>
   <h1>Korki z matmy - inż. Bartłomiej Bąk</h1>
-  <p>Szkoła podstawowa • Technikum • Liceum • Matura</p>
+  <p>Szkoła podstawowa • Technikum • Liceum</p>
 </header>
 
 <div class="container">
@@ -152,7 +195,7 @@
   <div class="card">
     <h2>Przebieg zajęć</h2>
     <p>
-      Zajęcia odbywają się online na platformie Discord.
+      Zajęcia odbywają się online na platformie Discord (istnieje możliwość spotkań na żywo - <a href="#kontakt" style="color:#ffffff;">proszę o kontakt</a>).
     </p>
     <p>
       Każda lekcja jest dostosowana do Twoich potrzeb.
@@ -183,7 +226,7 @@
       Moi uczniowie dzięki zajęciom poprawiają wyniki w szkole i na egzaminach. 
     </p>
     <p>  
-      Przygotowanie do matury sprawia, że dostają się na wymarzone kierunki studiów.
+      Przygotowanie do matury sprawia, że uczniowie dostają się na wymarzone kierunki studiów.
     </p>
   </div>
 
@@ -210,13 +253,23 @@
   </div>
 
   <div class="card">
-    <h2>Kontakt</h2>
+    <h2 id="kontakt">Kontakt</h2>
+    <p>Zdecydowałeś się? Masz pytania? </p><p>Pisz śmiało!</p>
     <div class="contact-box">
-      <p><strong>E-mail:</strong> twojemail@example.com</p>
-      <p><strong>Telefon:</strong> +48 666 470 620</p>
+      <p><strong>E-mail:</strong> 
+          korki.matma.bak@gmail.com
+      </p>
+      <p><strong>Telefon:</strong> <a href="tel:+48666470620" style="color:#ffffff; text-decoration:none;">+48 666 470 620</a></p>
+      <p><strong>Discord:</strong> bonk9832</p>
     </div>
-  </div>
 
+
+  <div class="contact-buttons">
+  <a href="tel:+48666470620" class="btn phone">📞 Zadzwoń</a>
+  <a href="mailto:korki.matma.bak@gmail.com?subject=Korepetycje" class="btn mail">📩 Email</a>
+  <a href="https://discord.gg/yzGHhUE6" class="btn discord">💬 Discord</a>
+  </div>
+</div>
 </div>
 
 <footer>
