@@ -4,51 +4,92 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Korepetycje z matematyki</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #0f172a;
       color: #e2e8f0;
       line-height: 1.6;
+      overflow-x: hidden;
+      background: #0f172a;
     }
 
     header {
-      background: #1e293b;
-      padding: 40px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: linear-gradient(
+          rgba(15, 23, 42, 0.75),
+          rgba(15, 23, 42, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1635070041078-e363dbe005cb") center/cover no-repeat;
+
+      backdrop-filter: blur(6px);
+      padding: 20px;
       text-align: center;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
     }
 
     header p {
-      margin-top: 10px;
-      color: #94a3b8;
+      margin: 5px 0 0;
+      color: #cbd5e1;
+      font-size: 0.9rem;
     }
 
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 20px;
+      padding: 140px 20px 20px;
     }
 
     .card {
-      background: #1e293b;
+      background: rgba(30, 41, 59, 0.85);
       padding: 20px;
       margin: 20px 0;
       border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
     }
 
     h2 {
       color: #38bdf8;
     }
 
-    .price {
-      font-size: 1.5rem;
-      color: #22c55e;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+      text-align: left;
+    }
+
+    th {
+      color: #38bdf8;
+    }
+
+    .contact-box {
+      margin-top: 10px;
+      padding: 12px;
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 8px;
     }
 
     .contact a {
@@ -60,6 +101,11 @@
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .contact a:hover {
+      transform: scale(1.05);
     }
 
     footer {
@@ -68,13 +114,14 @@
       color: #64748b;
       font-size: 0.9rem;
     }
+
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Korepetycje z matematyki</h1>
-  <p>Pomagam ogarnąć matematykę bez stresu — szkoła podstawowa, liceum, matura</p>
+  <h1>Korki z matmy - inż. Bartłomiej Bąk</h1>
+  <p>Szkoła podstawowa • Technikum • Liceum • Matura</p>
 </header>
 
 <div class="container">
@@ -82,36 +129,98 @@
   <div class="card">
     <h2>O mnie</h2>
     <p>
-      Cześć! Udzielam korepetycji z matematyki. Tłumaczę prosto, spokojnie i bez zbędnego stresu.
-      Pomagam w bieżącym materiale oraz przygotowaniu do sprawdzianów i matury.
+      Cześć!
+    </p>
+    <p>
+      Jestem inżynierem automatyki i robotyki, aktualnie jestem na drugim stopniu studiów ze Sztucznej Inteligencji na Politechnice Gdańskiej.
+      Od 4 lat udzielam korepetycji z matematyki i pracuję z uczniami na różnych poziomach edukacji.
+      Moim celem jest nie tylko pomóc Ci zdać egzamin, ale przede wszystkim zrozumieć matematykę.
     </p>
   </div>
 
   <div class="card">
     <h2>Dla kogo?</h2>
     <ul>
-      <li>Szkoła podstawowa</li>
-      <li>Liceum / technikum</li>
-      <li>Przygotowanie do matury podstawowej</li>
+      <li>Szkoła podstawowa (7-8 klasa)</li>
+      <li>Egzamin 8-klasisty</li>
+      <li>Liceum / Technikum</li>
+      <li>Matura podstawowa</li>
+      <li>Matura rozszerzona</li>
     </ul>
   </div>
 
   <div class="card">
-    <h2>Cena</h2>
-    <p class="price">50–80 zł / 60 min (do ustalenia)</p>
-    <p>Możliwe zajęcia online lub stacjonarnie (jeśli dotyczy).</p>
+    <h2>Przebieg zajęć</h2>
+    <p>
+      Zajęcia odbywają się online na platformie Discord.
+    </p>
+    <p>
+      Każda lekcja jest dostosowana do Twoich potrzeb.
+    </p>
+    <p>
+      Skupiamy się na zrozumieniu materiału i rozwiązywaniu zadań.
+    </p>
+    <p>
+      Oferuję dodatkowe materiały do pracy własnej.
+    </p>
   </div>
 
-  <div class="card contact">
+  <div class="card">
+    <h2>Czego wymagam?</h2>
+    <ul>
+      <li>Chęci do nauki</li>
+      <li>Otwartości</li>
+      <li>Systematyczności</li>
+    </ul>
+    <p>
+      Nie oczekuję, że od razu będziesz mistrzem matematyki 🙂
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Efekty pracy</h2>
+    <p>
+      Moi uczniowie dzięki zajęciom poprawiają wyniki w szkole i na egzaminach. 
+    </p>
+    <p>  
+      Przygotowanie do matury sprawia, że dostają się na wymarzone kierunki studiów.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Cennik</h2>
+    <table>
+      <tr>
+        <th>Poziom</th>
+        <th>Cena</th>
+      </tr>
+      <tr>
+        <td>Szkoła podstawowa</td>
+        <td>100 zł / 60 min</td>
+      </tr>
+      <tr>
+        <td>Szkoła średnia - poziom podstawowy</td>
+        <td>120 zł / 60 min</td>
+      </tr>
+      <tr>
+        <td>Szkoła średnia - poziom rozszerzony</td>
+        <td>130 zł / 60 min</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
     <h2>Kontakt</h2>
-    <p>Napisz do mnie, żeby umówić pierwszą lekcję:</p>
-    <a href="mailto:twojemail@example.com">Wyślij e-mail</a>
+    <div class="contact-box">
+      <p><strong>E-mail:</strong> twojemail@example.com</p>
+      <p><strong>Telefon:</strong> +48 666 470 620</p>
+    </div>
   </div>
 
 </div>
 
 <footer>
-  © 2026 Korepetycje z matematyki
+  © 2026 Korki z matmy - Bartłomiej Bąk
 </footer>
 
 </body>
