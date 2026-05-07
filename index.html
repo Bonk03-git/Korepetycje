@@ -48,6 +48,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 200px;
     }
 
     .container {
@@ -158,16 +159,74 @@
       opacity: 0.9;
     }
 
+    .header-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .header-text {
+      text-align: left;
+    }
+
+    .spots {
+      margin-top: 12px;
+      font-weight: bold;
+      color: #facc15;
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+    }
+
+    .top-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .top-btn {
+      background: #ffffff;
+      color: #0f172a;
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      transition: transform 0.2s, opacity 0.2s;
+      min-width: 50px;
+    }
+
+    .top-btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Korki z matmy - inż. Bartłomiej Bąk</h1>
-  <p>Szkoła podstawowa • Technikum • Liceum</p>
-  <p style="margin-top:10px; font-weight:bold; color:#facc15;">
-    Liczba miejsc ograniczona – aktualnie 5 / 8 uczniów
-  </p>
+  <div class = "header-content">
+    <div class = "header-text">
+      <h1>Korki z matmy</h1>
+      <p>Szkoła podstawowa • Technikum • Liceum</p>
+      <p style="
+        margin-top:12px;
+        font-weight:bold;
+        color:#facc15;
+        font-size:1.25rem;
+        letter-spacing:0.5px;
+        ">
+        Liczba miejsc ograniczona – aktualnie 5 / 8 uczniów
+      </p>
+    </div>
+    <div class="top-buttons">
+      <a href="#cennik" class="top-btn">Cennik</a>
+      <a href="#kontakt" class="top-btn">Kontakt</a>
+    </div>
+  </div>
 </header>
 
 <div class="container">
@@ -178,7 +237,9 @@
       Cześć!
     </p>
     <p>
-      Jestem inżynierem automatyki i robotyki, aktualnie jestem na drugim stopniu studiów ze Sztucznej Inteligencji na Politechnice Gdańskiej.
+      Nazywam się Bartłomiej Bąk i jestem inżynierem automatyki i robotyki, aktualnie studiuję drugi stopień studiów na kierunku Sztuczna Inteligencja na Politechnice Gdańskiej.
+    </p>
+    <p> 
       Od 4 lat udzielam korepetycji z matematyki i pracuję z uczniami na różnych poziomach edukacji.
       Moim celem jest nie tylko pomóc Ci zdać egzamin, ale przede wszystkim zrozumieć matematykę.
     </p>
@@ -234,7 +295,7 @@
   </div>
 
   <div class="card">
-    <h2>Cennik</h2>
+    <h2 id="cennik">Cennik</h2>
     <table>
       <tr>
         <th>Poziom</th>
@@ -276,7 +337,7 @@
 </div>
 
 <footer>
-  © 2026 Korki z matmy - Bartłomiej Bąk
+  © 2026 Korki z matmy - inż.Bartłomiej Bąk
 </footer>
 
 </body>
